@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* .background-image {
+  background-image: url("YOUR_IMAGE_URL_HERE");
+  background-size: cover;
+  background-position: center;
+} */
+
+
+.progress-bar {
+  transition: width 0.5s ease-in-out;
+}
+
+

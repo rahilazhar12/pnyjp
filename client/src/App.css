@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900;9..40,1000&display=swap');
+
+body{
+  font-family: 'DM Sans', sans-serif;
+}
+
+.active{
+  color: #3575E2;
+  font-weight: 500;
+}
+
+a {
+  text-decoration: none;
+  /* color: rgb(97, 97, 97); */
+}
+
+li {
+  list-style: none;
+}
+
+.btns {
+  padding: 10px 20px;
+  margin-right: 6px;
+  background: transparent;
+  border: none;
+  border: 0.6px solid #ccc;
+  border-radius: 5px;
+  color: #323232;
+  cursor: pointer;
+}
+
+/* jobs page */
+
+.card {
+  margin: 20px;
+  border: 2px solid #dfdddd;
+  background: rgb(13,110,253);
+/* background: linear-gradient(90deg, rgba(13,110,253,0.7231267507002801) 0%, rgba(255,255,255,1) 51%, rgba(220,53,69,0.6194852941176471) 100%); */
+background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 10px;
+  padding: 20px;
+  cursor: pointer;
+}
+.card:hover {
+  box-shadow: 6px 4px 12px gray;
+  /* transform: scale(1.1); */
+  transition: 0.3s ease-in-out;
+}
+
+
+.card-title {
+  margin-bottom: 1rem;
+}
+
+.card-reviews {
+  margin-bottom: 1rem;
+  display: flex;
+}
+
+.rating-star {
+  color: #d5ab55;
+}
+
+.total-reviews {
+  font-size: 0.9rem;
+  margin-left: 10px;
+}
+
+.card-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.loginbtn{
+  background-color: whitesmoke;
+  color: blue;
+  border: 1px solid lightgray;
+  font-weight: bold;
+}
+
+.bag-icon {
+  color: #535353;
+}
+.sidebarSpecial{
+  /* background: linear-gradient(to bottom, #D5DEE7 0%, #E8EBF2 50%, #E2E7ED 100%), linear-gradient(to bottom, rgba(0,0,0,0.02) 50%, rgba(255,255,255,0.02) 61%, rgba(0,0,0,0.02) 73%), linear-gradient(33deg, rgba(255,255,255,0.20) 0%, rgba(0,0,0,0.20) 100%);
+ background-blend-mode: normal,color-burn; */
+ /* background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%); */
+ /* background-image: linear-gradient(120deg, #fdb2a1 0%, #c2e9fb 100%); */
+ /* background-image: linear-gradient(120deg, #f1bbafbd 0%, #fff 100%); */
+ background-image: linear-gradient(120deg, #e2d1c3a2 0%, #fff 100%);
+}
+.sidebarSpecial2{
+ 
+ /* background-image: linear-gradient(120deg,  #c2e9fb 0%, #fdb2a1 100%,); */
+ /* background-color: red; */
+ background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3c5 100%);
+}
+.navbarSpecial{
+  /* background-image: linear-gradient(to top, #6a85b6 0%, #bac8e0 100%); */
+  /* background-image: linear-gradient(to top, #9795f0 0%, #eaa1b2 100%); */
+  background-image: linear-gradient(to top, #7028e4 0%, #e5b2ca 100%);
+  /* background-image: linear-gradient(to top, #e8198b 0%, #c7eafd 100%); */
+  /* background-image: linear-gradient(to top, #0250c5 0%, #d43f8d 100%); */
+}
+.sidebar-title {
+  font-size: 22px;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+
+.sidebar-items {
+  margin-top: 20px;
+}
+
+.sidebar-label-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.sidebar-label-container input {
+  position: absolute;
+  opacity: 0;
+  left: 35px;
+  /* font-size: 280px; */
+  height: 20px;
+  width: 20px;
+  top: 0px;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 2px;
+  left: 0px;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+.all {
+  background: linear-gradient(blue, crimson);
+}
+
+.sidebar-label-container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.sidebar-label-container input:checked ~ .checkmark {
+  background-color: #2196f3;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.sidebar-label-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.sidebar-label-container .checkmark:after {
+  top: 6.4px;
+  left: 6.4px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: white;
+}
+
+.line {
+  margin-top: 3rem;
+  border-color: #f7f7f7;
+}
+
+.createJobBg{
+  background-image: linear-gradient(to top, #fbc2eb83 0%, #a6c0ee8a 100%);
+}
+
+/* create a job page */
+
+.create-job-flex{
+  @apply flex flex-col lg:flex-row items-center justify-between gap-8;
+}
+
+.create-job-input{
+  @apply block w-full flex-1 bg-white py-1.5 pl-3 text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm sm:leading-6
+}

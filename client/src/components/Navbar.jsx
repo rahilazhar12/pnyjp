@@ -13,8 +13,8 @@ const Navbar = () => {
   // Declaring Nav items / dynamic / custom path
   const navItems = [
     { path: "/", title: "Start a search" },
-    { path: "/my-job", title: "My Jobs" },
-    { path: "salary", title: "Salary Estimate" },
+    // { path: "/my-job", title: "My Jobs" },
+    // { path: "salary", title: "Salary Estimate" },
     { path: "/post-job", title: "Post A Job" },
   ];
 

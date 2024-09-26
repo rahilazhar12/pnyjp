@@ -1,17 +1,14 @@
 import React from "react";
+import { FormControlLabel, Radio } from "@mui/material";
 
 const InputField = ({ handleChange, value, title, name }) => {
   return (
-    
-    <lable className="sidebar-label-container">
-      <input
-        type="radio"
-        name={name}
-        value={value}
-        onChange={handleChange}
-      />
-      <span className="checkmark"></span>{title}
-    </lable>
+    <FormControlLabel
+      value={value}
+      control={<Radio onChange={handleChange} />}
+      label={title}
+      name={name}
+    />
   );
 };
 

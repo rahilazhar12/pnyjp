@@ -16,12 +16,16 @@ const Home = () => {
   // fetching jobs data  / public -> jobs.json
   useEffect(() => {
     setIsLoading(true);
-    // fetch("jobs.json").then(res=>res.json()).then(data=>{
-    fetch(`${import.meta.env.VITE_API_URL}/api/v1/jobs/all-jobs`)
+    fetch(`${import.meta.env.VITE_API_URL}/api/v1/jobs/getjobs`)
       .then((res) => res.json())
       .then((data) => {
-        setJobs(data);
+        setJobs(data.jobs || []);  // Ensure jobs is an array
         setIsLoading(false);
+      })
+      .catch((error) => {
+        console.error("Error fetching jobs:", error);
+        setIsLoading(false);
+        setJobs([]);  // Fallback to empty array in case of error
       });
   }, []);
   // console.log(jobs)
@@ -35,10 +39,9 @@ const Home = () => {
   };
 
   // Filter jobs on the basis of title
-  const filteredItems = jobs.filter(
-    (job) => job.jobTitle.toLowerCase().indexOf(query.toLowerCase()) !== -1
+  const filteredItems = jobs.filter((job) =>
+    job.jobTitle.toLowerCase().includes(query.toLowerCase())
   );
-
   // --------- Radio based button filtering
   const handleChange = (event) => {
     setSelectedCategory(event.target.value);

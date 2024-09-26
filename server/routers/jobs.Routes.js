@@ -9,8 +9,10 @@ const upload = require('../multer/imgConfig.js');
 const router = express.Router()
 
 
-router.get("/all-jobs", getJobsList)
+
 router.post("/create-new-jobs", upload.single('companyLogo'), createNewJob)
+router.get("/getjobs/:id?", getJobsList)
+
 
 
 

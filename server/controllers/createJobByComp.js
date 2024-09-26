@@ -83,6 +83,10 @@ const createNewJob = async (req, res) => {
   }
 };
 
+const getjobs = () => {
+
+}
+
 module.exports = createNewJob;
 
 

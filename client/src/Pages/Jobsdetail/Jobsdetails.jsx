@@ -11,7 +11,7 @@ const JobDetailPage = () => {
   useEffect(() => {
     const fetchJobDetails = async () => {
       try {
-        const response = await fetch(`http://localhost:8000/api/v1/jobs/getjobs/66f39c7e8542682e1a6578d3`); // Replace with your actual API endpoint
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/v1/jobs/getjobs/${id}`); // Replace with your actual API endpoint
         if (!response.ok) {
           throw new Error('Failed to fetch job details');
         }
